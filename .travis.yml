@@ -1,9 +1,10 @@
 sudo: required
+
 services:
  - docker
 
 before_install:
- - docker build -t jamaldocker1987/docker-react -f Dockerdile.dev .
+ - docker build -t jamaldocker1987/docker-react -f Dockerfile.dev .
 
  script:
  - docker run jamaldocker1987/docker-react npm run test -- --coverage
